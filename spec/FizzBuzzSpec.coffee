@@ -1,6 +1,9 @@
 FizzBuzz = require('./../lib/FizzBuzz').FizzBuzz
 
 describe 'FizzBuzz', ->
+  beforeEach -> 
+    @fizzbuzz = new FizzBuzz
 
-  it 'should be created', ->
-    @x = new FizzBuzz
+  it 'responds to a number', ->
+    expect(@fizzbuzz.respond(1)).toEqual ''
+
