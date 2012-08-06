@@ -1,8 +1,11 @@
 FizzBuzz = require('./../lib/FizzBuzz').FizzBuzz
+FizzBuzzFilter = require('./../lib/FizzBuzz').FizzBuzzFilter
 
 describe 'FizzBuzz', ->
   beforeEach -> 
-    @fizzbuzz = new FizzBuzz
+    @fizzVal = 3
+    @buzzVal = 5
+    @fizzbuzz = new FizzBuzz(new FizzBuzzFilter 3, 5)
 
   it 'responds to a number', ->
     expect(@fizzbuzz.respond(1)).not.toBeNull
