@@ -13,8 +13,6 @@ class FizzBuzz
     else
       @filter = filter
 
-
-
   respond: (num) ->
     # validation
     throw 'invalid input' unless typeof num == 'number'
